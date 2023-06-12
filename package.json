@@ -1,0 +1,30 @@
+{
+  "name": "proshop-course",
+  "version": "1.0.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "author": "Afa",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22"
+  }
+}
